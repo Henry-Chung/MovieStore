@@ -1,0 +1,5 @@
+C:\code\Antra\Project\MovieStore\MovieStore.Core\bin\Debug\netstandard2.0\MovieStore.Core.deps.json
+C:\code\Antra\Project\MovieStore\MovieStore.Core\bin\Debug\netstandard2.0\MovieStore.Core.dll
+C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.0\MovieStore.Core.csprojAssemblyReference.cache
+C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.0\MovieStore.Core.AssemblyInfoInputs.cache
+C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.0\MovieStore.Core.AssemblyInfo.cs

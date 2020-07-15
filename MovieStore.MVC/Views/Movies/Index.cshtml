@@ -1,0 +1,36 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of Top Movies  @ViewBag.MoviesCount </h1>
+@ViewData["myname"];
+@*we need to tell our View whats the data it is recieving*@
+@*in this case its reviewing list of Movies*@
+@*I wanna use HTML table or HTML UL*@
+@*Razor Views combine C# with HTML and they are very powerful and Developer friendly*@
+
+@*
+    1. Place @model on top of the view with the expecting data type
+    2. we can acess the actual data using Model (ASP.NET) alias for @model
+*@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Budget</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Id</td>
+                <td>@movie.Title</td>
+                <td>@movie.Budget</td>
+            </tr>
+        }
+    </tbody>
+</table>
