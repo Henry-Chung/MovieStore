@@ -1,5 +1,4 @@
-﻿@model List<Movie>
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
@@ -23,14 +22,5 @@
             <th>Budget</th>
         </tr>
     </thead>
-    <tbody>
-        @foreach (var movie in Model)
-        {
-            <tr>
-                <td>@movie.Id</td>
-                <td>@movie.Title</td>
-                <td>@movie.Budget</td>
-            </tr>
-        }
-    </tbody>
+
 </table>

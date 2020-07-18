@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -35,6 +36,8 @@ namespace MovieStore.Infrastructure.Data
         // This DbSet, is gonna represent out Table based on Entity class which is Genre in this case
         public MovieStoreDbContext(DbContextOptions<MovieStoreDbContext> options) : base(options)
         {
+            //var test = Genre.where(g => g.Id == 2).ToList();
+            //var test2 = await Genres.Where(g => g.Id == 2).ToListAsync();
         }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Movie> Movies { get; set; }
@@ -114,7 +117,7 @@ namespace MovieStore.Infrastructure.Data
             modelBuilder.HasOne(p => p.Movie).WithMany(m => m.Purchases).HasForeignKey(p => p.MovieId);
             modelBuilder.HasOne(p => p.Customer).WithMany(c => c.Purchases).HasForeignKey(p => p.UserId);
             modelBuilder.Property(p => p.PurchaseNumber).ValueGeneratedOnAdd();
-            modelBuilder.Property(p => p.TotalPrice).HasColumnType("decimal(18, 2)").IsRequired() ;
+            modelBuilder.Property(p => p.TotalPrice).HasColumnType("decimal(5, 2)").IsRequired() ;
             modelBuilder.Property(p => p.PurchaseDateTime).HasDefaultValueSql("getdate()");
         }
 
@@ -132,13 +135,13 @@ namespace MovieStore.Infrastructure.Data
         {
             modelBuilder.ToTable("User");
             modelBuilder.HasKey(u => u.Id);
-            modelBuilder.Property(u => u.FirstName).HasMaxLength(128);
-            modelBuilder.Property(u => u.LastName).HasMaxLength(128);
+            modelBuilder.Property(u => u.FirstName).HasMaxLength(256);
+            modelBuilder.Property(u => u.LastName).HasMaxLength(256);
             modelBuilder.Property(u => u.DateOfBirth).HasColumnType("datetime2");
             modelBuilder.Property(u => u.Email).HasMaxLength(256); ;
-            modelBuilder.Property(u => u.HashedPassword).HasMaxLength(1024);
-            modelBuilder.Property(u => u.Salt).HasMaxLength(1024);
-            modelBuilder.Property(u => u.PhoneNumber).HasMaxLength(16);
+            modelBuilder.Property(u => u.HashedPassword).HasMaxLength(256);
+            modelBuilder.Property(u => u.Salt).HasMaxLength(256);
+            modelBuilder.Property(u => u.PhoneNumber).HasMaxLength(4096);
             modelBuilder.Property(u => u.TwoFactorEnabled).HasColumnType("bit");
             modelBuilder.Property(u => u.LockoutEndDate).HasColumnType("datetime2");
             modelBuilder.Property(u => u.LastLoginDateTime).HasDefaultValueSql("getdate()");

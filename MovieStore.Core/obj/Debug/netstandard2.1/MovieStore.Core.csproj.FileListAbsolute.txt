@@ -7,3 +7,12 @@ C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.1\MovieS
 C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.dll
 C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.pdb
 C:\code\Antra\Project\MovieStore\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.csprojAssemblyReference.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\bin\Debug\netstandard2.1\MovieStore.Core.deps.json
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\bin\Debug\netstandard2.1\MovieStore.Core.dll
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\bin\Debug\netstandard2.1\MovieStore.Core.pdb
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.csprojAssemblyReference.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.AssemblyInfoInputs.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.AssemblyInfo.cs
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.csproj.CoreCompileInputs.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.dll
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Core\obj\Debug\netstandard2.1\MovieStore.Core.pdb

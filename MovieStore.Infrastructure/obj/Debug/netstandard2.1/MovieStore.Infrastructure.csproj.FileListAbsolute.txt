@@ -10,3 +10,15 @@ C:\code\Antra\Project\MovieStore\MovieStore.Infrastructure\obj\Debug\netstandard
 C:\code\Antra\Project\MovieStore\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.csproj.CopyComplete
 C:\code\Antra\Project\MovieStore\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.dll
 C:\code\Antra\Project\MovieStore\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.pdb
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\bin\Debug\netstandard2.1\MovieStore.Infrastructure.deps.json
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\bin\Debug\netstandard2.1\MovieStore.Infrastructure.dll
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\bin\Debug\netstandard2.1\MovieStore.Infrastructure.pdb
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\bin\Debug\netstandard2.1\MovieStore.Core.dll
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\bin\Debug\netstandard2.1\MovieStore.Core.pdb
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.csprojAssemblyReference.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.AssemblyInfoInputs.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.AssemblyInfo.cs
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.csproj.CoreCompileInputs.cache
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.csproj.CopyComplete
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.dll
+C:\code\Antra\Project\MovieStore - ER\MovieStore.Infrastructure\obj\Debug\netstandard2.1\MovieStore.Infrastructure.pdb

@@ -8,7 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MovieStore.Core.RepositoryInterfaces;
+using MovieStore.Core.ServiceInterfaces;
 using MovieStore.Infrastructure.Data;
+using MovieStore.Infrastructure.Repositories;
+using MovieStore.Infrastructure.Services;
 
 namespace MovieStore.MVC
 {
@@ -26,6 +30,9 @@ namespace MovieStore.MVC
         {
             services.AddControllersWithViews();
             services.AddDbContext<MovieStoreDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MovieStoreDbConnection")));
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<IMovieService, MovieService>();
+            //services.AddScoped<IMovieService, MovieServiceTest>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
