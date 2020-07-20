@@ -70,10 +70,10 @@ namespace MovieStore.MVC.Controllers
         //    return "ABC";
         //}
 
-        public interface xyx
-        {
-            int Add(int x, int y);
-        }
+        //public interface xyx
+        //{
+        //    int Add(int x, int y);
+        //}
 
     }
 }

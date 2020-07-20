@@ -21,8 +21,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Top Movies</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Genres</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown">Genres</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @await Component.InvokeAsync("Genres")
+                                @*<a class="dropdown-item" href="#">Action</a>
+                                 <a class="dropdown-item" href="#">Adventure</a>
+                                    <a class="dropdown-item" href="#">Crime</a>*@
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Login</a>

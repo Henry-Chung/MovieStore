@@ -32,5 +32,26 @@ namespace MovieStore.Infrastructure.Repositories
             return (IEnumerable<Movie>)movies;
         }
 
+        public async Task<IEnumerable<Movie>> GetMovieByGenreId(int id)
+        {
+            //var movies = await _dbContext.Movies.OrderByDescending(m => m.Reviews.Average(r => r.Rating)).Take(25).ToListAsync();
+            var movies = await _dbContext.MovieGenres.Where(mg => mg.GenreId == id).Select(mg => mg.Movie).ToListAsync();
+
+            return (IEnumerable<Movie>)movies;
+        }
+
+        public override async Task<Movie> GetByIdAsync(int id)
+        {
+            var movies = await _dbContext.Movies
+                .Include(m => m.MovieCasts)
+                .ThenInclude(c => c.Cast)
+                .Include(m => m.Reviews)
+                .Where(m => m.Id == id)
+                .FirstAsync();
+            movies.Rating = movies.Reviews.Average(r => r.Rating);
+
+            return movies;
+        }
+
     }
 }
