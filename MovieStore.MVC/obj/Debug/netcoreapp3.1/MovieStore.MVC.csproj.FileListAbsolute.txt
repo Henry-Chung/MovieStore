@@ -299,3 +299,8 @@ C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Vi
 C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Genres\Default.cshtml.g.cs
 C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Genre.cshtml.g.cs
 C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Detail.cshtml.g.cs
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginResult.cshtml.g.cs

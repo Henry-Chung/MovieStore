@@ -19,6 +19,9 @@ namespace MovieStore.Infrastructure.Services
 
         public async Task<IEnumerable<Movie>> GetTop25HighestRevenueMovies()
         {
+            //int x = 0;
+            //int y = 5;
+            //int z = y / x;
             return await _movieRepository.GetHighestRevenueMovies();
         }
 

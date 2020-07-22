@@ -3,5 +3,95 @@
     ViewData["Title"] = "Detail";
 }
 @model MovieStore.Core.Entities.Movie
-<h1>Detail</h1>
+    <div class="container-fluid" >
+        <div class="row" style="background-color:black;">
+            <div class="col-3">
+                <img src="@Model.PosterUrl" alt="@Model.Title" class="img-fluid" />
+            </div>
+            <div class="col-6">
+                <h1 class="text-light">@Model.Title</h1>
+                <p class="text-dark">@Model.Tagline</p>
+                <p class="text-muted">
+                    <text class="mr-5">@Model.RunTime m | @Model.ReleaseDate.Value.Year</text> 
+                    @foreach (var mg in @Model.MovieGenres)
+                    {
+                        <span class="badge badge-secondary">
+                            @mg.Genre.Name
+                        </span>
 
+                    }
+                </p>
+                <p><span class="badge badge-warning"> @string.Format("{0:0.0}", @Model.Rating)</span></p>
+                <p class="text-light">@Model.Overview</p>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <button type="button" class="btn btn-outline-light mb-4 mt-2">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-outline-light btn-block mb-4 mr-2"><i class="far fa-edit"></i> Review</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-outline-light btn-block mb-4 mr-2"><i class="fas fa-play"></i> Trailer</button>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-light btn-block mb-4 mr-2">BUY $@Model.Price</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h5>MOVIE FACTS</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i class="far fa-calendar-alt"></i>
+                            RelaceDate <span class="badge badge-dark">@Model.ReleaseDate.Value.ToString("MMM dd, yyyy")</span>
+                        
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-hourglass-half"></i>
+                            Run Time <span class="badge badge-dark">@Model.RunTime m</span>                        
+                    </li>
+                    <li class="list-group-item">
+                        <i class="far fa-money-bill-alt"></i>
+                            Box Office <span class="badge badge-dark"> @string.Format("{0:C}", @Model.Revenue)</span>
+                        
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-dollar-sign"></i>
+                            Budget  <span class="badge badge-dark">@string.Format("{0:C}", @Model.Revenue)</span>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fab fa-imdb mr-2"></i><i class="fas fa-share-square"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-8">
+                <h5>CAST</h5>
+                <ul class="list-group list-group-flush">
+                    @foreach (var c in Model.MovieCasts)
+                    {
+                        <li class="list-group-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="@c.Cast.ProfilePath" alt="@c.Cast.Name" class="rounded-circle" style="width:34px; height:51px;" />
+                                    </div>
+                                    <div class="col-3">
+                                        <text>@c.Cast.Name</text>
+                                    </div>
+                                    <div class="col-5">
+                                        <text>@c.Character</text>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>

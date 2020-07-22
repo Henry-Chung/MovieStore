@@ -65,15 +65,13 @@ namespace MovieStore.MVC.Controllers
             return View(movies);
         }
 
-        //public string Index()
-        //{
-        //    return "ABC";
-        //}
-
-        //public interface xyx
-        //{
-        //    int Add(int x, int y);
-        //}
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            });
+        }
 
     }
 }

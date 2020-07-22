@@ -28,7 +28,7 @@ namespace MovieStore.Infrastructure.Repositories
         {
 
             var movies = await _dbContext.Movies.OrderByDescending(m => m.Reviews.Average(r => r.Rating)).Take(25).ToListAsync();
-
+            //await _dbContext.Reviews.Where(r => r.MovieId == id).AverageAsync(r => r.Rating);
             return (IEnumerable<Movie>)movies;
         }
 
@@ -46,6 +46,8 @@ namespace MovieStore.Infrastructure.Repositories
                 .Include(m => m.MovieCasts)
                 .ThenInclude(c => c.Cast)
                 .Include(m => m.Reviews)
+                .Include(m=> m.MovieGenres)
+                .ThenInclude(m => m.Genre)
                 .Where(m => m.Id == id)
                 .FirstAsync();
             movies.Rating = movies.Reviews.Average(r => r.Rating);
