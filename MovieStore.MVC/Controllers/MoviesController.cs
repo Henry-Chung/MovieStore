@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MovieStore.Core.ServiceInterfaces;
 using MovieStore.Infrastructure.Services;
+using MovieStore.MVC.Filters;
 using MovieStore.MVC.Models;
+
 namespace MovieStore.MVC.Controllers
 {
     public class MoviesController : Controller
@@ -37,7 +39,9 @@ namespace MovieStore.MVC.Controllers
             return View(movies);
         }
 
+        [MovieStoreFilter]
         [HttpGet]
+        [Route("Movie/Detail/{id}")]
         public async Task<IActionResult> Detail(int id)
         {
             var movies = await _movieService.GetMovieById(id);

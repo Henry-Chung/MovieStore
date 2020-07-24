@@ -55,6 +55,16 @@ namespace MovieStore.Infrastructure.Services
         {
             return await _movieRepository.GetMovieByGenreId(id);
         }
+
+        public async Task<IEnumerable<Movie>> GetMovieByUserId(int UserId)
+        {
+            return await _movieRepository.GetMovieByUserId(UserId);
+        }
+
+        public async Task<Movie> CheckTheMovieIsFavorite(int userId, int movieId)
+        {
+            return await _movieRepository.CheckTheMovieIsFavorite(userId, movieId);
+        }
     }
 
 }

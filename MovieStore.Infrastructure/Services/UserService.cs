@@ -3,6 +3,7 @@ using MovieStore.Core.Models.Request;
 using MovieStore.Core.Models.Response;
 using MovieStore.Core.RepositoryInterfaces;
 using MovieStore.Core.ServiceInterfaces;
+using MovieStore.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,11 +15,65 @@ namespace MovieStore.Infrastructure.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly ICryptoService _cryptoService;
-        public UserService(IUserRepository userRepository, ICryptoService cryptoService)
+        private readonly IMovieService _movieService;
+        private readonly IPurchaseRepository _purchaseRepository;
+        private readonly IReviewRepository _reviewRepository;
+        private readonly IFavoriteRepository _favoriteRepository;
+
+        public UserService(IUserRepository userRepository, ICryptoService cryptoService, IMovieService movieService, IPurchaseRepository purchaseRepository, IReviewRepository reviewRepository, IFavoriteRepository favoriteRepository)
         {
             _userRepository = userRepository;
             _cryptoService = cryptoService;
+            _movieService = movieService;
+            _purchaseRepository = purchaseRepository;
+            _reviewRepository = reviewRepository;
+            _favoriteRepository = favoriteRepository;
         }
+
+        public async Task<Movie> CheckTheMovieIsFavorite(int userId, int movieId)
+        {
+            var movies = await _movieService.CheckTheMovieIsFavorite(userId, movieId);
+            return movies;
+        }
+
+        public async Task<Review> CreateReview(Review review)
+        {
+            var isExist = await _reviewRepository.GetExistsAsync(r => r.MovieId == review.MovieId && r.UserId == review.UserId);
+            if (isExist)
+            {
+                return await _reviewRepository.UpdateAsync(review);
+            }
+            return await _reviewRepository.AddAsync(review);  
+        }
+
+        public async Task Favorite(Favorite favorite)
+        {
+            var isExist = await _favoriteRepository.GetExistsAsync(f => f.MovieId == favorite.MovieId && f.UserId == favorite.UserId);
+            if (isExist)
+            {
+                await _favoriteRepository.DeleteAsync(favorite);
+            }
+            else
+            {
+                await _favoriteRepository.AddAsync(favorite);
+            }
+            
+        }
+
+        public async Task<Purchase> Purchase(PurchaseRequestModel purchaseRequestModel)
+        {
+            var movie = await _movieService.GetMovieById(purchaseRequestModel.MovieId);
+            var p = new Purchase
+            {
+                UserId = purchaseRequestModel.UserId,
+                PurchaseNumber = purchaseRequestModel.PurchaseNumber.Value,
+                TotalPrice = movie.Price.Value,
+                MovieId = purchaseRequestModel.MovieId,
+                PurchaseDateTime = purchaseRequestModel.PurchaseDate.Value,
+            };
+            return await _purchaseRepository.AddAsync(p);
+        }
+
         public async Task<UserRegisterResponseModel> RegisterUser(UserRegisterRequestModel requestModel)
         {
             // Step 1 : Check whether this user already exists in the database

@@ -33,6 +33,7 @@ namespace MovieStore.MVC
         {
             services.AddControllersWithViews();
             services.AddDbContext<MovieStoreDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MovieStoreDbConnection")));
+            services.AddMemoryCache();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie
@@ -41,7 +42,7 @@ namespace MovieStore.MVC
                     {
                         options.Cookie.Name = "MovieStoreAuthCookie";
                         options.ExpireTimeSpan = TimeSpan.FromHours(2);
-                        options.LoginPath = "/Acount/Login";
+                        options.LoginPath = "/Account/Login";
                     }
 
                 );
@@ -53,6 +54,12 @@ namespace MovieStore.MVC
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICryptoService, CryptoService>();
+            services.AddScoped<IPurchaseRepository, PurchaseRepository>();
+            services.AddScoped<IPurchaseService, PurchaseService>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
+            services.AddScoped<IReviewService, ReviewService>();
+            services.AddScoped<IFavoriteRepository, FavoriteRepository>();
+            services.AddScoped<IFavoriteService, FavoriteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,8 +67,8 @@ namespace MovieStore.MVC
         {
             if (env.IsDevelopment())
             {
-                //app.UseDeveloperExceptionPage();
-                app.UseMovieStoreExceptionMiddleware();
+                app.UseDeveloperExceptionPage();
+                //app.UseMovieStoreExceptionMiddleware();
             }
             else
             {

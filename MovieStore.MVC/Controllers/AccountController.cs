@@ -30,7 +30,8 @@ namespace MovieStore.MVC.Controllers
             if (ModelState.IsValid)
             {
                 // now call the service
-                var createdUser = await _userService.RegisterUser(userRegisterRequestModel);
+                //var createdUser = 
+                await _userService.RegisterUser(userRegisterRequestModel);
                 return RedirectToAction("Login");
             }
             // we take this object from the View

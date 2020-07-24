@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
+using MovieStore.Core.Entities;
 using MovieStore.Core.ServiceInterfaces;
 using MovieStore.Infrastructure.Services;
 using MovieStore.MVC.Models;
@@ -63,6 +64,13 @@ namespace MovieStore.MVC.Controllers
             var movies = await _movieService.GetTop25HighestRevenueMovies();
             
             return View(movies);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UserMovieList(int uid)
+        {
+            var movies = await _movieService.GetMovieByUserId(uid);
+            return View("Index", movies);
         }
 
         public IActionResult Error()

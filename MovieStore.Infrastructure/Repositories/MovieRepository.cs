@@ -42,18 +42,38 @@ namespace MovieStore.Infrastructure.Repositories
 
         public override async Task<Movie> GetByIdAsync(int id)
         {
-            var movies = await _dbContext.Movies
+                var movies = await _dbContext.Movies
+                .Where(m => m.Id == id)
                 .Include(m => m.MovieCasts)
                 .ThenInclude(c => c.Cast)
-                .Include(m => m.Reviews)
-                .Include(m=> m.MovieGenres)
+                .Include(m => m.MovieGenres)
                 .ThenInclude(m => m.Genre)
-                .Where(m => m.Id == id)
                 .FirstAsync();
+
+            _dbContext.Reviews.Where(r => r.MovieId == id).Load();
+            _dbContext.Purchases.Where(p => p.MovieId == id).Load();
+            _dbContext.Favorites.Where(p => p.MovieId == id).Load();
             movies.Rating = movies.Reviews.Average(r => r.Rating);
 
             return movies;
         }
 
+        public async Task<IEnumerable<Movie>> GetMovieByUserId(int UserId)
+        {
+
+            var movies = await _dbContext.Movies
+                .Include(p => p.Purchases)
+                .Where(m => m.Purchases.Any(p=> p.UserId == UserId))
+                .ToListAsync();
+            return movies;
+        }
+
+        public async Task<Movie> CheckTheMovieIsFavorite(int userId, int movieId)
+        {
+            var movies = await _dbContext.Movies
+                .Include(p => p.Favorites)
+                .Where(m => m.Favorites.Any(p => p.UserId == userId && p.MovieId == movieId)).FirstAsync();
+            return movies;
+        }
     }
 }

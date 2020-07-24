@@ -11,8 +11,8 @@ namespace MovieStore.Core.RepositoryInterfaces
         Task<IEnumerable<Movie>> GetHighestRevenueMovies();
         Task<IEnumerable<Movie>> GetHighestRatedMovies();
         Task<IEnumerable<Movie>> GetMovieByGenreId(int id);
-        //Task<Movie> Get(int id);
-        //Task<Movie> Create(Movie movie);
-        //Task<Movie> Update(Movie movie);
+        Task<IEnumerable<Movie>> GetMovieByUserId(int UserId);
+
+        Task<Movie> CheckTheMovieIsFavorite(int userId, int movieId);
     }
 }

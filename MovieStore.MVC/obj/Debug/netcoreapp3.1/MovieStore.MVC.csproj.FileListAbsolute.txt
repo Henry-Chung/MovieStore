@@ -304,3 +304,5 @@ C:\code\Antra\Project\MovieStore\MovieStore.MVC\bin\Debug\netcoreapp3.1\Microsof
 C:\code\Antra\Project\MovieStore\MovieStore.MVC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginResult.cshtml.g.cs
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\User\Reviews.cshtml.g.cs
+C:\code\Antra\Project\MovieStore\MovieStore.MVC\obj\Debug\netcoreapp3.1\Razor\Views\User\Favorite.cshtml.g.cs
