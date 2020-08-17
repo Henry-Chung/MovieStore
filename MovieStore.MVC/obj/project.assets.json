@@ -8262,11 +8262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.MVC\\MovieStore.MVC.csproj",
+      "projectUniqueName": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.MVC\\MovieStore.MVC.csproj",
       "projectName": "MovieStore.MVC",
-      "projectPath": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.MVC\\MovieStore.MVC.csproj",
+      "projectPath": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.MVC\\MovieStore.MVC.csproj",
       "packagesPath": "C:\\Users\\henry\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.MVC\\obj\\",
+      "outputPath": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8285,11 +8285,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj": {
-              "projectPath": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj"
+            "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj": {
+              "projectPath": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj"
             },
-            "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Infrastructure\\MovieStore.Infrastructure.csproj": {
-              "projectPath": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Infrastructure\\MovieStore.Infrastructure.csproj"
+            "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Infrastructure\\MovieStore.Infrastructure.csproj": {
+              "projectPath": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Infrastructure\\MovieStore.Infrastructure.csproj"
             }
           }
         }

@@ -85,7 +85,8 @@ namespace MovieStore.MVC
             app.UseEndpoints(endpoints =>
             {
                 // Routing -- Pattern matching technique
-
+                // 1. Traditional way of routing
+                // 2. Attribute based Routing
                 // http://localhost:2222/Movies
                 endpoints.MapControllerRoute(
                     name: "default",

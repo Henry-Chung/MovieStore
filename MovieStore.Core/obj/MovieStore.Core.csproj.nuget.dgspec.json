@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj": {}
+    "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj": {}
   },
   "projects": {
-    "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj": {
+    "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj",
+        "projectUniqueName": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj",
         "projectName": "MovieStore.Core",
-        "projectPath": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj",
+        "projectPath": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\MovieStore.Core.csproj",
         "packagesPath": "C:\\Users\\henry\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\obj\\",
+        "outputPath": "D:\\code\\Antra\\Project\\MovieStore\\MovieStore.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
